@@ -8,7 +8,7 @@ def say():
     try:
         word = request.json.get('слово')
         if not word:
-            return jsonify({"": "Пошибкаустое сообщение"}), 400
+            return jsonify({"ошмбка": "пустое сообщение"}), 400
 
         state["word"] = word
         return jsonify({"сообщение": "Обновление успешно"}), 200

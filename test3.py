@@ -30,7 +30,7 @@ def listen():
 def create_client(role, word=None):
     client = app.test_client()
     if role == "говорун" and word:
-        response = client.post('/say', json={"слово": word})  # Исправлен маршрут
+        response = client.post('/say', json={"слово": word})
         assert response.status_code == 200  # Успешно
         return response
     elif role == "слушатель":
